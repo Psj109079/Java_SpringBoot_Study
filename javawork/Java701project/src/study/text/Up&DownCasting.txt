@@ -1,0 +1,38 @@
+
+class Unit {
+    public void attack() {
+        System.out.println("유닛 공격");
+    }
+}
+
+class Zealot extends Unit {
+    public void attack() {
+        System.out.println("찌르기");
+    }
+
+    public void teleportation() {
+        System.out.println("프로토스 워프");
+    }
+}
+
+업캐스팅 - UpCasting
+	ex) Unit unit_zealot = new Zealot();
+	
+		업캐스팅을 하게되면 자식클래스에만 있는 멤버는 사용할 수 없게 됨
+		자식 클래스에 오버라이딩된 메서드든 자식 클래스의 메서드로 실행됨
+	
+	업캐스팅 하는 이유
+		공통적으로 할 수 있는 부분을 만들어서 간단하게 다루기 위해
+		업캐스팅을 하게되면 상속 관계에서 상속받은 서브 클래스의 갯수의 상관없이
+		하나의 인스턴스로 묶어서 관리할 수 있다 (다형성)
+
+다운캐스팅 - DownCasting
+	ex)  Zealot unit_down = (Zealot)unit_zealot;
+		
+		부모 클래스로 업캐스팅된 자식 클래스를 복구하여 본인의 필드와 기능을
+		회복하기 위한 목적
+		업캐스팅이 되지않은 부모 객체를 다운캐스팅 할 경우 오류 발생(ClassCastException)
+		형제 클래스끼리는  캐스팅 되지 않음
+		
+
+		

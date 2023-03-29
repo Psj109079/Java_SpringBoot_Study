@@ -1,0 +1,12 @@
+-- 연습용 계정 생성 
+-- 한줄 실행 ctrl + enter
+create user c##scott identified by a1234;
+-- 오라클 최신버전은 계정앞에 c##을 붙여서 생성해야 한다
+-- c##을 안붙히고 생성하려면 아래 코드 추가 후 생성하면 됨
+alter session set "_ORACLE_SCRIPT"=true;
+-- 위의 c##scott 제거
+drop user c##scott;
+-- scott 라는 계정 생성하기
+create user scott identified by a1234;
+-- 기본권한주기
+grant connect, resource to scott;

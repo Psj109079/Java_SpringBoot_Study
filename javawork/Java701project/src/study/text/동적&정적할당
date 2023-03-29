@@ -1,0 +1,48 @@
+정적 할당
+	컴파일 시점에서 컴파일러가 특정 메소드를 호출할 것이라고 명확하게 알고 있는경우
+	
+	정적 할당 예시
+	class SuperClass{
+	void printImp(){
+    	System.out.println("SuperClass printImp호출");
+    }
+	}
+	
+	class Main{
+		public static void main(String[] args){
+	    	new SuperClass.printImp();
+	    }
+	}
+	
+------------------------------------------------------------------------------------
+
+동적할당
+	컴파일러가 컴파일 단계에서 어떤 메소드를 호출할지 모르는 경우
+	이 경우 런타임 시점에서 컴파일러가 알게됨
+	
+	class SuperClass{
+		void printImp(){
+    		System.out.println("SuperClass printImp호출");
+    	}
+	}
+	class SubClass1 extends SuperClass{
+		void printImp(){
+	    	System.out.println("SubClass2 printImp호출");
+	    }
+	}
+	class SubClass2 extends SuperClass{
+		void printImp(){
+	    	System.out.println("SubClass2 printImp호출");
+	    }
+	}
+	class Main{
+		public static void main(String[] args){
+	    	SuperClass superC1 = new SuperClass();
+	        SuperClass superC2 = new Sub1Class();
+	        SuperClass superC3 = new Sub2Class();
+	        
+	        superC1.printImp();		//SuperClass의 printImp 호출
+	        superC2.printImp();		//Sub1Class의 printImp 호출
+	        superC3.printImp();		//Sub2Class의 printImp 호출
+	    }
+	}
