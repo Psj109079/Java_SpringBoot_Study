@@ -23,4 +23,5 @@
 	
 	//메인페이지로 이동
 	response.sendRedirect("cookiemain.jsp");
+
 %>

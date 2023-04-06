@@ -29,7 +29,7 @@
 	int uploadSize=1024*1024*3;//3mb
 	
 	try{
-    	multiRequest=new MultipartRequest(request,realPath,uploadSize,"utf-8",
+		multiRequest=new MultipartRequest(request,realPath,uploadSize,"utf-8",
 				new DefaultFileRenamePolicy());
 		
 		//사진의 원래이름 가져오기

@@ -36,7 +36,7 @@
 	//데이타 dto에 넣기
 	dto.setNum(num);
 	dto.setName(name);
-	dto.setAdress(address);
+	dto.setAddress(address);
 	dto.setBirthyear(birthyear);
 	dto.setPhoto(photo);
 	dto.setJob(job);

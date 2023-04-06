@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bitcamp>
+	<stu name="이효리">
+		<java>89</java>
+		<spring>100</spring>
+		<html>78</html>
+	</stu>
+	<stu name="강호동">
+		<java>67</java>
+		<spring>80</spring>
+		<html>70</html>
+	</stu>
+	<stu name="민효린">
+		<java>91</java>
+		<spring>79</spring>
+		<html>84</html>
+	</stu>
+	<stu name="유재석">
+		<java>100</java>
+		<spring>79</spring>
+		<html>94</html>
+	</stu>
+	<stu name="이선희">
+		<java>77</java>
+		<spring>88</spring>
+		<html>99</html>
+	</stu>
+</bitcamp>

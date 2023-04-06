@@ -28,7 +28,7 @@
 		<jsp:include page="sessionlogout.jsp"/>
 		<hr>
 		<%for(int i=1;i<=15;i++){
-			String path="../../image/mycar/mycar"+i+".png";
+			String path="../../image/mycarimage/mycar"+i+".png";
 		 %>
 		 	<img src="<%=path%>" width="100" height="100" border="1"
 		 	style="margin:5px 5px;">

@@ -40,7 +40,7 @@
 					<select name = "photo" id = "photo">
 						<%
 						for(int i = 1; i <= 15; i++) { %>
-							<option value = "<%="car" + i + ".png"%>"><%="car" + i + ".png"%></option>
+							<option value = "<%="mycar" + i + ".png"%>"><%="mycar" + i + ".png"%></option>
 						<%}%>
 					</select>
 				</td>
@@ -75,7 +75,7 @@
 		</table>
 	</form>
 	
-	<img src="../image/mycarimage/car1.png" width= "200" id = "view"
+	<img src="../image/mycarimage/mycar1.png" width= "200" id = "view"
 	style = "position: absolute; left: 410px; top: 100px">
 	<script>
 		document.getElementById("photo").onchange=function() {

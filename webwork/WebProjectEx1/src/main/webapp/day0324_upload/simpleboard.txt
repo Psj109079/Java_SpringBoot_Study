@@ -1,0 +1,9 @@
+create table simpleboard(
+	num smallint auto_increment primary key,
+    writer varchar(20) not null,
+    subject varchar(200) not null,
+    content varchar(500) not null,
+    photo varchar(100),
+    readcount smallint default 0,
+    writeday datetime default now()
+);

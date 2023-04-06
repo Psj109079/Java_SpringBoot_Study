@@ -14,7 +14,7 @@ public class SimpleBoardDto {
 	public SimpleBoardDto() {
 		super();
 	}
-	
+
 	public SimpleBoardDto(String writer, String subject, String content, String photo) {
 		super();
 		this.writer = writer;
@@ -38,6 +38,7 @@ public class SimpleBoardDto {
 	public int getNum() {
 		return num;
 	}
+
 	public void setNum(int num) {
 		this.num = num;
 	}
@@ -45,6 +46,7 @@ public class SimpleBoardDto {
 	public String getWriter() {
 		return writer;
 	}
+
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
@@ -52,6 +54,7 @@ public class SimpleBoardDto {
 	public String getSubject() {
 		return subject;
 	}
+
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
@@ -59,6 +62,7 @@ public class SimpleBoardDto {
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
@@ -66,6 +70,7 @@ public class SimpleBoardDto {
 	public String getPhoto() {
 		return photo;
 	}
+
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
@@ -73,6 +78,7 @@ public class SimpleBoardDto {
 	public int getReadcount() {
 		return readcount;
 	}
+
 	public void setReadcount(int readcount) {
 		this.readcount = readcount;
 	}
@@ -80,10 +86,8 @@ public class SimpleBoardDto {
 	public Timestamp getWriteday() {
 		return writeday;
 	}
+
 	public void setWriteday(Timestamp writeday) {
 		this.writeday = writeday;
 	}
-	
-	
-	
 }

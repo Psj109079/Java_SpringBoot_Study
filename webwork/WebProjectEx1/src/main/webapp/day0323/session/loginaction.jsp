@@ -23,4 +23,5 @@
 			history.back();
 		</script>		
 	<%}
+	
 %>

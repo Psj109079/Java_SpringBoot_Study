@@ -66,7 +66,7 @@
 			<th bgcolor="lightgray" width="100">주소</th>
 			<td>
 				<input type="text" name="address" class="form-control"
-				value="<%=dto.getAdress()%>">
+				value="<%=dto.getAddress()%>">
 			</td>
 		</tr>
 		<tr>
