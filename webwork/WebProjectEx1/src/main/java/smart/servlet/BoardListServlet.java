@@ -28,14 +28,13 @@ public class BoardListServlet extends HttpServlet {
 		// 전체 목록 가져오기
 		List<SmartDto> list = dao.getAllList();
 		
-		// request에 저장
+		// request에 저장		이름          값
 		request.setAttribute("totalCount", totalCount);
 		request.setAttribute("list", list);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/day0405_smart/list.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("../day0405_smart/list.jsp");
 		rd.forward(request, response);
 	}
-
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
