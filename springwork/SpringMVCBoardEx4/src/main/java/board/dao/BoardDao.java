@@ -35,5 +35,19 @@ public class BoardDao {
 		session.insert(nameSpace + "insertOfBoard", dto);
 	}
 	
+	public void updateReadCount(int idx) {
+		session.update(nameSpace + "updateReadCountOfBoard", idx);
+	}
 	
+	public BoardDto selectOneBoard(int idx) {
+		return session.selectOne(nameSpace + "selectOneBoardOfIdx", idx);
+	}
+	
+	public void deleteOfBoard(int idx) {
+		session.delete(nameSpace + "deleteBoardOfIdx", idx);
+	}
+	
+	public void updateBoard(BoardDto dto) {
+		session.update(nameSpace + "updateBoard", dto);
+	}
 }

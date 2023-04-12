@@ -37,10 +37,17 @@ public class LoginController {
 		// 이메일과 비밀번호가 맞는지 체크
 		int count = memberDao.isEqualPassEmail(email, pass);
 		if(count == 1) { // 이메일과 비밀번호가 맞는경우 1
+			
+			// 세션 시간
+			session.setMaxInactiveInterval(60 * 60 * 5);
 			// 로그인 성공시  세션에 저장하기
 			session.setAttribute("loginok", "yes");
 			session.setAttribute("loginemail", email);
 			session.setAttribute("saveemail", saveemail == null ? "no" : "yes");
+			// 로그인한 사람의 num 값을 얻어서 세션에 저장하기
+			int num = memberDao.selectOneOfEmail(email).getNum();
+			session.setAttribute("loginnum", num);
+			
 			return "redirect:../board/list";
 		} else {
 			return "login/loginfail";

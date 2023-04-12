@@ -82,6 +82,7 @@ public class MemberController {
 		memberDao.deleteMember(num);
 		return "redirect:list";
 	}
+	
 	// redirect:list = mapping 되어있는 해당 메소드로 감
 	// return member/list = 해당 jsp로 감
 	
@@ -111,20 +112,20 @@ public class MemberController {
 		
 		// 업로드할 폴더 경로 구하기
 		String realFolder = request.getSession().getServletContext().getRealPath("/resources/photo");
-		System.out.println(request.getSession());
-		System.out.println(request.getSession().getServletContext());
-		System.out.println(realFolder);
 		// 사진 업로드
 		String photo = upload.getOriginalFilename();
-			
-		try {
-			upload.transferTo(new File(realFolder + "/" + photo));
-		} catch (IllegalStateException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}	
-		dto.setPhoto(photo);
+		if(photo.equals("")) {
+			dto.setPhoto(null);
+		} else {
+			try {
+				upload.transferTo(new File(realFolder + "/" + photo));
+			} catch (IllegalStateException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}	
+			dto.setPhoto(photo);
+		}
 		session.removeAttribute("loginok");
 		session.removeAttribute("loginemail");
 		memberDao.updateOfMember(dto);

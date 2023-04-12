@@ -1,5 +1,7 @@
 package board.dto;
 
+import java.sql.Timestamp;
+
 public class BoardDto {
 	private int idx;
 	private int num;
@@ -7,7 +9,10 @@ public class BoardDto {
 	private String content;
 	private String images;
 	private int readcount;
-	private String writeday;
+	private Timestamp writeday;
+	private String name;
+	private String photo;
+	public int acount; // ´ñ±Û°¹¼öÀúÀå
 	
 	public int getIdx() {
 		return idx;
@@ -51,12 +56,32 @@ public class BoardDto {
 		this.readcount = readcount;
 	}
 	
-	public String getWriteday() {
+	public Timestamp getWriteday() {
 		return writeday;
 	}
-	public void setWriteday(String writeday) {
+	public void setWriteday(Timestamp writeday) {
 		this.writeday = writeday;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	
+	public int getAcount() {
+		return acount;
+	}
+	public void setAcount(int acount) {
+		this.acount = acount;
+	}
 	
 }

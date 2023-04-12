@@ -36,6 +36,8 @@
 	</select>
 	
 	<update id="updateOfMember" parameterType="mdto">
-		update member2 set name = #{name}, photo = #{photo}, email = #{email}, hp = #{hp} where num = #{num}
+		update member2 set name = #{name},
+		 <if test = "photo!=null">photo = #{photo},</if>
+		 email = #{email}, hp = #{hp} where num = #{num}
 	</update>
 </mapper>

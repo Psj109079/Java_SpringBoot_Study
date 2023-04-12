@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="365e6d92-5ff5-469b-bbb9-35693045a0ec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dto/BoardDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/BoardSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/BoardSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/MemberSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/MemberSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/member/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/member/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dao/BoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dao/BoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dto/BoardDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dto/BoardDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/BoardSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/BoardSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/MemberSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/MemberSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCEx2/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCEx2/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCReadEx3/target/m2e-wtp/web-resources/META-INF/maven/com.study/bitcamp/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCReadEx3/target/m2e-wtp/web-resources/META-INF/maven/com.study/bitcamp/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringTest/target/m2e-wtp/web-resources/META-INF/maven/com.aaa/bbb/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringTest/target/m2e-wtp/web-resources/META-INF/maven/com.aaa/bbb/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/Springex1/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/Springex1/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2OJkirX1Ms4LWOOSmeK7dYbcBGf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "onboarding.tips.debug.path": "D:/bit701naver/study/bootwork/BootIntelliEx1/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BootIntelliEx1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BootIntelliEx1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="365e6d92-5ff5-469b-bbb9-35693045a0ec" name="Changes" comment="" />
+      <created>1681286203069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681286203069</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
