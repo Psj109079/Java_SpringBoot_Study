@@ -13,7 +13,7 @@ public class HomeController {
 		dto.setName("이상아");
 		dto.setAddr("강남구");
 		dto.setHp("010-2222-3333");
-		
+		System.out.println(dto); // toString() 호출
 		return dto;
 	}
 }
