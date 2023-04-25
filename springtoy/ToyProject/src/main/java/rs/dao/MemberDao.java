@@ -4,6 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import rs.dto.MemberDto;
+
 @Repository
 public class MemberDao {
 	
@@ -14,5 +16,9 @@ public class MemberDao {
 	
 	public int totalCount() {
 		return session.selectOne(nameSpace + "totalCountOfMember");
+	}
+	
+	public void addMember(MemberDto dto) {
+		session.insert(nameSpace + "addMember", dto);
 	}
 }

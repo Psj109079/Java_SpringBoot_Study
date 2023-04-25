@@ -16,44 +16,51 @@
 	body, body *{
 		font-family: 'Jua'
 	}
+	div.box {
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 </style>
 </head>
 <body>
-	<form action="join" method="post">
-		<table>
-			<tr>
-				<td>이름</td>
-				<td>
-					<input type="text" name="name">
-				</td>
-			</tr>
-			<tr>
-				<td>아이디</td>
-				<td>
-					<input type="text" name="id">
-					<button type="button" id="duplicate">중복확인</button>
-				</td>
-			</tr>
-			<tr>
-				<td>비밀번호</td>
-				<td>
-					<input type="password" name="pass" id="pass">
-				</td>
-			</tr>
-			<tr>
-				<td>비밀번호확인</td>
-				<td>
-					<input type="password" id="passchk"><br>
-					<span style="color:red" id="alert"></span>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<button type="submit" disabled id="jbutton">회원가입</button>
-				</td>
-			</tr>
-		</table>
-	</form>
+	<div class="box">
+		<form action="join" method="post">
+			<table>
+				<tr>
+					<td>이름</td>
+					<td>
+						<input type="text" name="name">
+					</td>
+				</tr>
+				<tr>
+					<td>아이디</td>
+					<td>
+						<input type="text" name="id">
+						<button type="button" id="duplicate">중복확인</button>
+					</td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td>
+						<input type="password" name="pass" id="pass">
+					</td>
+				</tr>
+				<tr>
+					<td>비밀번호확인</td>
+					<td>
+						<input type="password" id="passchk"><br>
+						<span style="color:red" id="alert"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button type="submit" disabled id="jbutton">회원가입</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
 	<script>
 	
 		var jbutton = document.getElementById("jbutton");
