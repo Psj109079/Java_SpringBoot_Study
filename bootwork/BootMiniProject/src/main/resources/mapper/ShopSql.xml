@@ -30,4 +30,6 @@
 	<update id="updateShop" parameterType="ShopDto">
 		update bootshop set sangpum=#{sangpum}, price=#{price}, color=#{color}, cnt=#{cnt} where num=#{num}
 	</update>
+	
+
 </mapper>

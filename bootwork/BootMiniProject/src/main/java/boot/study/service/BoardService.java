@@ -79,4 +79,26 @@ public class BoardService implements BoardServiceInter{
 	public BoardDto getData(int num) {
 		return boardMapper.getData(num);
 	}
+
+	@Override
+	public boolean isEqualPass(int num, String pass) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("num", num);
+		map.put("pass", pass);
+		// 비번이 맞으면 1 -> true반환, 틀리면 0 -> false반환
+		boolean b = boardMapper.isEqualPass(map) == 0 ? false : true;
+		return b;
+	}
+
+	@Override
+	public void deleteBoard(int num) {
+		boardMapper.deleteBoard(num);
+	}
+
+	@Override
+	public void updateBoard(BoardDto dto) {
+		boardMapper.updateBoard(dto);
+	}
+	
+	
 }

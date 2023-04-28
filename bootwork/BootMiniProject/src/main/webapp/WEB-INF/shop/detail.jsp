@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ include file="../commonvar.jsp" %>
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +35,7 @@
 	
 	      <!-- Modal body -->
 	      <div class="modal-body">
-	      	<img src="http://aofwzybqtkrh16981840.cdn.ntruss.com/shop/${dto.photo}?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="2" style="margin-left: 30px; border-radius: 50px;" id="modalphoto">
+	      	<img src="http://${imageUrl_small}/shop/${dto.photo}?type=f&w=160&h=160&faceopt=true&ttype=jpg" id="modalphoto">
 	      	
 			<!-- 카메라 모양 -->
 			<i class="bi bi-camera-fill update-photo" style="position: absolute; left: 220px; top: 140px; font-size: 30px; cursor: pointer;"></i>
@@ -69,7 +70,7 @@
 				processData: false,
 				contentType: false,
 				success: function(res) {
-					let src = `http://aofwzybqtkrh16981840.cdn.ntruss.com/shop/\${res}?type=f&w=160&h=160&faceopt=true&ttype=jpg`;
+					let src = `http://${imageUrl_small}/shop/\${res}?type=f&w=160&h=160&faceopt=true&ttype=jpg`;
 					$("#modalphoto").attr("src", src);
 				}
 			});
@@ -79,7 +80,7 @@
 	<table class="table table-bordered">
 		<tr>
 			<td rowspan="5">
-				<img src="https://kr.object.ncloudstorage.com/bit701-bucket-106/shop/${dto.photo}">
+				<img src="https://${imageUrl}/shop/${dto.photo}">
 			</td>
 			<td>
 				<b>상품명: ${dto.sangpum}</b>
@@ -141,7 +142,7 @@
 	
 	      <!-- Modal body -->
 	      <div class="modal-body">
-	      	<img src="http://aofwzybqtkrh16981840.cdn.ntruss.com/shop/${dto.photo}?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="2" style="margin-left: 30px; border-radius: 50px;" id="modalphoto">
+	      	<img src="http://${imageUrl_small}/shop/${dto.photo}?type=f&w=160&h=160&faceopt=true&ttype=jpg">
 			<br>
 			<form id="updateform">
 				<input type="hidden" name="num" value="${dto.num}">

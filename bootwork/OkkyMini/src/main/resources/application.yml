@@ -1,0 +1,24 @@
+server:
+  port: 9000
+
+# jsp 포워드 설정
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bit701?serverTimezone=Asia/Seoul
+    username: proto
+    password: 1234
+  servlet:
+    multipart:
+      max-file-size: 20MB
+
+#mybatis
+mybatis:
+  type-aliases-package: study.okky.dto
+  mapper-locations:
+  - /mapper/**/*.xml

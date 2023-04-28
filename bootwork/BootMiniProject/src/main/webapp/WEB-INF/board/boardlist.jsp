@@ -49,12 +49,21 @@
 					
 					<!-- 제목 -->
 					<td>
+						<!--  depth 1당 빈칸2개 띄우기 -->
+						<c:forEach begin="1" end="${dto.depth}">
+							&nbsp;&nbsp;
+						</c:forEach>
+						<!-- 답글일 경우에만 앞에 답글 이미지 넣기 -->
+						<c:if test="${dto.depth > 0}">
+							<img src="../photo/re.png">
+						</c:if>
 						<a href="content?num=${dto.num}&currentPage=${currentPage}" style="color: black; text-decoration: none; cursor: pointer">
-							${dto.subject}
+							<!-- 제목이 길경우 200px만 나오고 말줄임표.... -->
+							<span style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;display:inline-block;max-width: 250px;">${dto.subject}</span>
 							<!-- 사진이 있을경우 아이콘 출력 -->
 							<c:if test="${dto.filename != ''}">
 								<i class="bi bi-image-fill"></i>
-							</c:if>							
+							</c:if>				
 						</a>
 					</td>
 					<td>${dto.writer}</td>

@@ -1,10 +1,10 @@
-package bit.study.main;
+package okky.mini.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BootMiniProject1ApplicationTests {
+class OkkyMiniApplicationTests {
 
 	@Test
 	void contextLoads() {

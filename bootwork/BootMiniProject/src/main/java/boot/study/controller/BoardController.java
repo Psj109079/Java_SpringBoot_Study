@@ -1,17 +1,23 @@
 package boot.study.controller;
 
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import boot.study.dto.BoardDto;
 import boot.study.service.BoardService;
+import naver.cloud.NcpObjectStorageService;
 
 @Controller
 @RequestMapping("/board")
@@ -19,6 +25,13 @@ public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
+	
+	@Autowired
+	private NcpObjectStorageService storageService;
+	
+	// 버켓이름지정
+	//private String bucketName = "bit701-bucket-106"; // 각자 클라우드 버킷이름
+	private String bucketName="bit701-bucket-106";
 
 	@GetMapping("/list")
 	public String list(@RequestParam(defaultValue = "1") int currentPage, Model model) {
@@ -27,7 +40,7 @@ public class BoardController {
 		int totalCount = boardService.getTotalCount();
 		int totalPage; // 총 페이지 수
 		int perPage = 10; // 한 페이지당 보여질 글의 갯수
-		int perBlock = 5; // 한 블럭당 보여질 페이지의 갯수
+		int perBlock = 10; // 한 블럭당 보여질 페이지의 갯수
 		int startNum; // 각 페이지에서 보여질 글의 시작번호
 		int startPage; // 각 블럭에서 보여질 시작 페이지 번호
 		int endPage; // 각 블럭에서 보여질 끝 페이지 번호
@@ -83,5 +96,104 @@ public class BoardController {
 		model.addAttribute("step", step);
 		model.addAttribute("depth", depth);
 		return "/main/board/boardform";
+	}
+	
+	@PostMapping("/insert")
+	public String insert(BoardDto dto, MultipartFile upload) {
+		
+		String filename="";
+		// 업로드를 한 경우에만 버킷에 이미지 저장
+		if(!upload.getOriginalFilename().equals("")) {
+			filename = storageService.uploadFile(bucketName, "board", upload);
+		}
+		
+		// dto에 파일명 저장
+		dto.setFilename(filename);
+		
+		boardService.insertBoard(dto);
+		
+		return "redirect:list";
+	}
+	
+	@GetMapping("/content")
+	public String content(int num, int currentPage, Model model) {
+		
+		// 조회수 증가
+		boardService.updateReadcount(num);
+		
+		// dto 얻기
+		BoardDto dto = boardService.getData(num);
+		
+		// model 저장
+		model.addAttribute("dto", dto);
+		model.addAttribute("currentPage", currentPage);
+		return "/main/board/content";
+	}
+	
+	@GetMapping("/delete")
+	@ResponseBody public Map<String, String> delete(int num, String pass) {
+		Map<String, String> map = new HashMap<>();
+		
+		// 비번이 맞을경우 map에 result -> success 를 넣고 버킷의 사진 지우고 db 글 지우기
+		// 틀릴경우 map 에 result -> fail
+		boolean b =  boardService.isEqualPass(num, pass);
+		if(b) {
+			map.put("result", "success");
+			// db 삭제전에 저장된 이미지를 버켓에서 지운다
+			String filename = boardService.getData(num).getFilename();
+			storageService.deleteFile(bucketName, "board", filename);
+			// db 삭제 
+			boardService.deleteBoard(num);
+		} else {
+			map.put("result", "fail");
+		}
+		return map;
+	}
+	
+	@GetMapping("/chkpass")
+	@ResponseBody public Map<String, String> chkPass(int num, String pass) {
+		Map<String, String> map = new HashMap<>();
+		
+		// 비번이 맞을경우 map에 result -> success 를 넣고 버킷의 사진 지우고 db 글 지우기
+		// 틀릴경우 map 에 result -> fail
+		boolean b =  boardService.isEqualPass(num, pass);
+		if(b) {
+			map.put("result", "success");
+		} else {
+			map.put("result", "fail");
+		}
+		return map;
+	}
+	
+	@GetMapping("/updateform")
+	public String updateForm(int num, int currentPage, Model model) {
+		BoardDto dto = boardService.getData(num);
+		
+		model.addAttribute("dto", dto);
+		model.addAttribute("currentPage", currentPage);
+		
+		return "/main/board/updateform";
+	}
+	
+	@PostMapping("/update")
+	public String update(BoardDto dto, MultipartFile upload, int currentPage) {
+		String filename = "";
+		
+		// 사진선택을 한 경우에는 기존 사진을 버킷에서 지우고 다시 업로드
+		if(!upload.getOriginalFilename().equals("")) {
+			// 기존 파일명 알아내기
+			filename = boardService.getData(dto.getNum()).getFilename();
+			// 버킷에서 삭제
+			storageService.deleteFile(bucketName, "board", filename);
+			
+			// 다시 업로드
+			filename = storageService.uploadFile(bucketName, "board", upload);
+		}
+		dto.setFilename(filename);
+		
+		// 수정
+		boardService.updateBoard(dto);
+		
+		return "redirect:content?currentPage=" + currentPage + "&num=" + dto.getNum();
 	}
 }

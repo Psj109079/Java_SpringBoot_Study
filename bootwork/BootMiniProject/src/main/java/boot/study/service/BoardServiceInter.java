@@ -18,4 +18,10 @@ public interface BoardServiceInter {
 	public void updateReadcount(int num);
 	
 	public BoardDto getData(int num);
+	
+	public boolean isEqualPass(int num, String pass);
+	
+	public void deleteBoard(int num);
+	
+	public void updateBoard(BoardDto dto);
 }
