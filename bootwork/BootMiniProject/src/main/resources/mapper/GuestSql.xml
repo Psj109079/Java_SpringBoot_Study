@@ -21,4 +21,24 @@
 	<select id="getPhotos" parameterType="int" resultType="PhotoDto">
 		select * from guest_photo where guest_idx = #{guest_idx} order by photo_idx asc
 	</select>
+	
+	<delete id="deletePhoto" parameterType="int">
+		delete from guest_photo where photo_idx = #{photo_idx}
+	</delete>
+	
+	<delete id="deleteAllPhoto" parameterType="int">
+		delete from guest_photo where guest_idx = #{guest_idx}
+	</delete>
+	
+	<delete id="deleteGuest" parameterType="int">
+		delete from guest where guest_idx = #{guest_idx}
+	</delete>
+	
+	<select id="getSelectPhoto" parameterType="int" resultType="String">
+		select photoname from guest_photo where photo_idx = #{photo_idx}
+	</select>
+	
+	<select id="getAllPhoto" parameterType="int" resultType="String">
+		select photoname from guest_photo where guest_idx = #{guest_idx}
+	</select>
 </mapper>

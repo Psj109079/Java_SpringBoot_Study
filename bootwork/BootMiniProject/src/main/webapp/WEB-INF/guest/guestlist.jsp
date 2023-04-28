@@ -30,6 +30,27 @@
 		font-size: 14px;
 		margin-right: 10px;
 	}
+	
+	div.guest_box {
+		width: 500px;
+		height: 200px;
+		border: 1px solid gray;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+		margin-left: 100px;
+	}
+	div.guest_box>div {
+		margin-bottom: 10px;
+	}
+	
+	.photodel {
+		cursor: pointer;
+		font-size: 1.2em;
+		position: relative;
+		left: -20px;
+		top: -30px;
+		visibility: hidden;
+	}
 </style>
 <script type="text/javascript">
 	$(function() {
@@ -119,13 +140,75 @@
 				}
 			});
 		});
+		
+		// 이미지 이벤트
+		$(document).on("mouseover", ".photo_box img",function(){
+			$(this).next().css("visibility", "visible");
+		});
+		
+		$(document).on("mouseout", ".photo_box img",function(){
+			$(this).next().css("visibility", "hidden");
+		});
+		
+		$(document).on("mouseover", ".photodel",function(){
+			$(this).css("visibility", "visible");
+		});
+		
+		$(document).on("mouseout", ".photodel",function(){
+			$(this).css("visibility", "hidden");
+		});
+		
+		// x아이콘 이벤트
+		$(document).on("click", ".photodel",function(e){
+			//e.stopPropagation();
+			
+			let c = confirm("해당 사진을 삭제하시겠습니까");
+			if(c) {
+				let photo_idx = $(this).attr("photo_idx");
+				
+				$.ajax({
+					type: "get",
+					url: "./deletephoto",
+					data: {"photo_idx":photo_idx},
+					dataType: "text",
+					success: function() {
+						alert("삭제되었습니다");
+						// 목록 다시 호출
+						list();
+					}
+				});
+			}
+		});
+		
+		// 방명록 삭제 이벤트
+		$(document).on("click", ".guestdel",function(e){
+			
+			let c = confirm("해당 방명록을 삭제하시겠습니까");
+			if(c) {
+				let guest_idx = $(this).attr("guest_idx");
+				
+				$.ajax({
+					type: "get",
+					url: "./delete",
+					data: {"guest_idx":guest_idx},
+					dataType: "text",
+					success: function() {
+						alert("삭제되었습니다");
+						// 목록 다시 호출
+						list();
+					}
+				});
+			}
+		});
 	});
+	
 	
 	function large_photo(photoname) {
 		let src=`https://${imageUrl}/guest/\${photoname}`;
 		// alert(src);
 		$("#view").attr("src", src);
 	}
+	
 	function list() {
 		$.ajax({
 			type: "get",
@@ -139,8 +222,11 @@
 							<div>
 								<b>\${ele.nickname}</b>
 								<span class="today">\${ele.writeday}</span>
+								&nbsp;
+								<i class="bi bi-trash guestdel" guest_idx = "\${ele.guest_idx}"
+								style="cursor:pointer"></i>
 							</div>
-						</div>
+							<pre>\${ele.content}</pre>
 						`;
 					// 각 방명록에 추가한 이미지 출력
 					s += "<div class='photo_box'>";
@@ -148,9 +234,10 @@
 						s += `
 							<img src="http://${imageUrl_small}/guest/\${pele.photoname}?type=f&w=80&h=80&faceopt=true&ttype=jpg"
 								class="small_photo" onclick="large_photo('\${pele.photoname}')" data-bs-toggle="modal" data-bs-target="#myImgModal">
+							<i class="bi bi-x-square photodel" photo_idx="\${pele.photo_idx}"></i>
 						`;
 					});
-					s += "</div>";
+					s += "</div></div>";
 				
 				});
 				$("div.alist").html(s);

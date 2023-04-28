@@ -5,33 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="365e6d92-5ff5-469b-bbb9-35693045a0ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dao/BoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/java/board/dto/BoardDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/BoardSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/BoardSql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/MemberSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mapper/MemberSql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/member/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/member/form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dao/BoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dao/BoardDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dto/BoardDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/board/dto/BoardDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/BoardSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/BoardSql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/MemberSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mapper/MemberSql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCBoardEx4/target/m2e-wtp/web-resources/META-INF/maven/com.study/board/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCEx2/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCEx2/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMVCReadEx3/target/m2e-wtp/web-resources/META-INF/maven/com.study/bitcamp/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMVCReadEx3/target/m2e-wtp/web-resources/META-INF/maven/com.study/bitcamp/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/SpringTest/target/m2e-wtp/web-resources/META-INF/maven/com.aaa/bbb/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringTest/target/m2e-wtp/web-resources/META-INF/maven/com.aaa/bbb/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springwork/Springex1/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/Springex1/target/m2e-wtp/web-resources/META-INF/maven/bit.study/spring/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/controller/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/controller/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/mapper/GuestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/mapper/GuestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/service/GuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/service/GuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/service/GuestServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/java/boot/study/service/GuestServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/resources/mapper/GuestSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/resources/mapper/GuestSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootMiniProject/src/main/webapp/WEB-INF/guest/guestlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootMiniProject/src/main/webapp/WEB-INF/guest/guestlist.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +25,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "onboarding.tips.debug.path": "D:/bit701naver/study/bootwork/BootIntelliEx1/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/bit701naver/study/bootwork/BootIntelliEx1/src/main/java/org/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BootIntelliEx1" />

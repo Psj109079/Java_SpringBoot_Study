@@ -34,5 +34,32 @@ public class GuestService implements GuestServiceInter{
 	public List<GuestPhotoDto> getPhotos(int guest_idx) {
 		return guestMapper.getPhotos(guest_idx);
 	}
+
+	@Override
+	public void deletePhoto(int photo_idx) {
+		guestMapper.deletePhoto(photo_idx);
+	}
+
+	@Override
+	public void deleteAllPhoto(int guest_idx) {
+		guestMapper.deleteAllPhoto(guest_idx); // on delete cascade 설정시 필요없음
+	}
+
+	@Override
+	public void deleteGuest(int guest_idx) {
+		guestMapper.deleteGuest(guest_idx);
+	}
+
+	@Override
+	public String getSelectPhoto(int photo_idx) {
+		return guestMapper.getSelectPhoto(photo_idx);
+	}
+
+	@Override
+	public List<String> getAllPhoto(int guest_idx) {
+		return guestMapper.getAllPhoto(guest_idx);
+	}
+	
+	
 	
 }

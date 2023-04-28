@@ -108,4 +108,36 @@ public class GuestController {
 		}
 		return list;
 	}
+	
+	// 사진 한장 (x 아이콘 클릭시 호출)
+	@GetMapping("/deletephoto")
+	@ResponseBody
+	public void deletePhoto(int photo_idx) {
+		// db의 데이터 삭제 전 스토리지의 사진부터 삭제하기
+		
+		// photo_idx 에 해당하는 파일명 얻기
+		String photoname = guestService.getSelectPhoto(photo_idx);
+		
+		// 스토리지에서 사진 삭제
+		storageService.deleteFile(bucketName, "guest", photoname);
+		
+		// db 삭제
+		guestService.deletePhoto(photo_idx);
+	}
+	
+	// 방명록 글 삭제
+	@GetMapping("/delete")
+	@ResponseBody
+	public void delete(int guest_idx) {
+		// 방명록 삭제 전 그 글에 연결된 모든 사진부터 스토리지에서 삭제하기
+		List<String> list = guestService.getAllPhoto(guest_idx);
+		for(String photoname : list) {
+			storageService.deleteFile(bucketName, "guest", photoname);
+		}
+		// db에서 글 삭제
+		// on delete cascade 설정 시 외부키로 연결된 데이터들은 자동으로 삭제된다
+		// 설정을 안했을경우 자식 테이블부터 먼저 삭제 후 부모테이블을 삭제함
+		guestService.deleteGuest(guest_idx);
+	}
+	
 }
