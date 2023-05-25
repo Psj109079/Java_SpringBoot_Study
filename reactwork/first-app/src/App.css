@@ -2,13 +2,36 @@
   text-align: center;
 }
 
+.cursor {
+  cursor: none;
+}
+
+.cursor:focus {
+  cursor: none;
+}
+
+.cursor:hover {
+  cursor: none;
+}
+
 .App-logo {
   height: 1vmin;
   pointer-events: none;
 }
 
 .App-logo2 {
-  height: 20vmin;
+  height: 150px;
+  pointer-events: none;
+}
+
+
+.energyin {
+  height: 150px;
+  pointer-events: none;
+}
+
+.energyout {
+  height: 150px;
   pointer-events: none;
 }
 
@@ -29,13 +52,21 @@
     animation: App-logo-spin infinite 0.5s linear;
   }
 
-  .App-logo2 {
+  .App-logo22 {
     animation: App-logo-spin2 infinite 0.0001s linear;
   }
 
   .bounce2 {
     animation: bounce infinite 0.5s ease-in-out;
     /* 추가적인 스타일을 여기에 작성하세요 */
+  }
+
+  .energyin {
+    animation: energyCharge infinite 0.5s linear;
+  }
+
+  .energyout {
+    animation: energyOut 1 1s linear;
   }
 }
 
@@ -71,5 +102,26 @@
   }
   to {
     transform: rotate(0);
+  }
+}
+
+@keyframes energyCharge {
+  from {
+    transform: rotate(720deg) scale(4);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(0.2);
+    opacity: 1;
+  }
+}
+@keyframes energyOut {
+  from {
+    transform: rotate(0) scale(0.2);
+    opacity: 0.2;
+  }
+  to {
+    transform: rotate(720deg) scale(10);
+    opacity: 1;
   }
 }
