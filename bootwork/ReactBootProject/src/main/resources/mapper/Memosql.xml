@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.MemoMapper">
+	
+	<insert id="insertMemo" parameterType="MemoDto">
+		insert into memodb(nickname, kormsg, engmsg, writeday) values(#{nickname}, #{kormsg}, #{engmsg}, now())  
+	</insert>
+	
+	<select id="getAllMemos" parameterType="String" resultType="MemoDto">
+		select * from memodb where kormsg Like concat("%", #{search}, "%") order by num desc
+	</select>
+	
+	<update id="updateMemo" parameterType="MemoDto">
+		update memodb set nickname = #{nickname}, kormsg = #{kormsg}, engmsg = #{engmsg} where num = #{num}
+	</update>
+		
+	<delete id="deleteMemo" parameterType="int">
+		delete from memodb where num = #{num} 
+	</delete>
+
+</mapper>

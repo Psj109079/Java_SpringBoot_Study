@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+ul.menu{
+  list-style: none;
+}
+
+ul.menu li{
+  float: left;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 22px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+ul.menu li a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+ul.menu li:hover{
+  background-color: darkcyan;
+  box-shadow: 5px 5px 5px gray;
+
+}
+
+ul.menu li a:hover{
+  color: aliceblue;
+}
+
+.mybtn{
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  background-color: paleturquoise;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.App-logo {
+  transform-origin: bottom center;
+  margin: 10px 40px 30px 40px;
+  pointer-events: none;
+}
+
+.spin45 {
+  transform-origin: bottom center;
+}
+
+.imgenlargement {
+  width: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 1s linear;
+
+  }
+  .spin45 {
+    animation: App-logo-spin infinite 1s linear;
+  }
+
+  .imgenlargement {
+    animation: img-scale infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes img-scale {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 25;
+  }
+
+}
+

@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+
+}
+
+.App * {
+  font-family: "jua";
+}
+
+.main {
+  width: 100%;
+  height: 2000px;
+  background-image: url("./image/imagejj.png");
+  background-size: 150px;
+  background-repeat: repeat;
+}
+
+
+
+h4.one {
+  color: plum;
+}
+
+h4.two {
+  text-shadow: 2px 2px 2px red;
+}
+
+.photo {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  height: 300px;
+  border: 5px solid orange;
+  border-radius: 20px;
+  background-color: darkseagreen;
+}
+
+.photo img {
+  width: 100px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.energyin {
+  height: 150px;
+  pointer-events: none;
+}
+
+.energyout {
+  height: 150px;
+  pointer-events: none;
+}
+
+
+.spin {
+
+}
+
+.falling-element {
+  position: absolute;
+  display: inline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo2 {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .main {
+    animation: jjspin infinite 10s linear;
+  }
+
+  .energyin {
+    animation: energyCharge 3 0.5s linear,energyChargeEnd infinite 0.5s 1.5s linear;
+  }
+
+  .energyout {
+    animation: energyOut 1 5s linear;
+  }
+
+  .spin {
+    animation: energyCharge infinite 1s linear;
+  }
+
+  .falling-element {
+    width: 200px;
+    animation: falling 1s linear infinite;
+  }
+
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jjspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes energyCharge {
+  from {
+    transform: rotate(720deg) scale(4);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes getEnergy {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes energyChargeEnd {
+  from {
+    transform: rotate(720deg) scale(0.5);
+  }
+  to {
+    transform: rotate(0) scale(0.5);
+  }
+}
+@keyframes energyOut {
+  from {
+    transform: rotate(0) scale(0.5);
+    opacity: 0.2;
+  }
+  to {
+    transform: rotate(720deg) scale(500);
+    opacity: 1;
+  }
+}
+
+@keyframes falling {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+

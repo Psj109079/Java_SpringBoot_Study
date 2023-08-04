@@ -1,0 +1,26 @@
+.foodcontainer {
+    margin: 20px 0 0 20px;
+}
+
+.liststyle{
+    float: left;
+    width: 110px;
+    height: 130px;
+    margin: 0 10px 10px 0;
+    border: 3px solid palevioletred;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 11px 0 11px;
+}
+
+.liststyle img {
+    border-radius: 20px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.myphoto {
+    max-width: 300px;
+    margin: 0 10px 0 10px;
+}

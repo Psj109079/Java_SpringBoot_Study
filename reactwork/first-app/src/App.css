@@ -62,7 +62,7 @@
   }
 
   .energyin {
-    animation: energyCharge infinite 0.5s linear;
+    animation: energyCharge 3 0.5s linear,getEnergy 1 1.5s 3s linear ,energyChargeEnd infinite 0.5s 4.5s linear;
   }
 
   .energyout {
@@ -98,7 +98,7 @@
 
 @keyframes App-logo-spin2 {
   from {
-    transform: rotate(720deg);
+    transform: rotate(720deg) ;
   }
   to {
     transform: rotate(0);
@@ -111,17 +111,34 @@
     opacity: 0;
   }
   to {
-    transform: rotate(0) scale(0.2);
+    transform: rotate(0) scale(0.5);
     opacity: 1;
+  }
+}
+@keyframes getEnergy {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes energyChargeEnd {
+  from {
+    transform: rotate(720deg) scale(0.5);
+  }
+  to {
+    transform: rotate(0) scale(0.5);
   }
 }
 @keyframes energyOut {
   from {
-    transform: rotate(0) scale(0.2);
+    transform: rotate(0) scale(0.5);
     opacity: 0.2;
   }
   to {
-    transform: rotate(720deg) scale(10);
+    transform: rotate(720deg) scale(1000);
     opacity: 1;
   }
 }

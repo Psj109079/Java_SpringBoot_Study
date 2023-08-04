@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.InfoMapper">
+	<insert id="insertInfo" parameterType="InfoDto">
+		insert into myinfo (irum, address, birthday) values (#{irum}, #{address}, #{birthday})
+		<selectKey keyProperty="num" resultType="int" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	
+	<update id="updatePhoto" parameterType="HashMap">
+		update myinfo set photo=#{photo} where num = #{num}
+	</update>
+	
+	<select id="list" resultType="InfoDto">
+		select * from myinfo order by num desc
+	</select>
+	
+	<delete id="deleteInfo" parameterType="int">
+		delete from myinfo where num = #{num}
+	</delete>
+	
+	<select id="getData" parameterType="int" resultType="InfoDto">
+		select * from myinfo where num=#{num}
+	</select>
+	
+	<update id="updateData" parameterType="InfoDto">
+		update myinfo set irum = #{irum}, address = #{address}, birthday = #{birthday} where num = #{num}
+	</update>
+</mapper>
